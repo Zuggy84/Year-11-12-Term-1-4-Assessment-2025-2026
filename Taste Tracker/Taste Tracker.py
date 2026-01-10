@@ -25,6 +25,9 @@ def home():
                     <div class="container">
                         <a href="/reviews">Reviews Page</a>
                     </div>
+                    <div class="container">
+                        <a href="/credits">Credits Page</a>
+                    </div>
                     <hr>
                     <h1>OR</h1>
                     <hr>
@@ -56,4 +59,23 @@ def reviews():
     </html>
     '''
     return Taste_Tracker_Reviews_Page
+@app.route('/credits')
+def credits():
+    Taste_Tracker_Credits_Page='''
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <link rel="stylesheet" type="text/css" href="/static/css/Taste Tracker Credits Page.css">
+            <title>Taste Tracker Credits Page</title>
+        </head>
+        <body>
+            <hr>
+            <div style="margin: 20px; border: 2px solid grey; padding: 2px">
+                <div style="border: 2px solid grey; padding: 10px">
+                    <h1>Taste Tracker Credits Page</h1>
+                </div>
+            </div>
+            <hr>
+        </body>
+    </html>'''
 app.run(debug=True, reloader_type='stat', port=5000)
