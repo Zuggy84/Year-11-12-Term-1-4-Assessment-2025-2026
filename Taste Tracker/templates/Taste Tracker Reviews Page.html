@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/static/css/Taste Tracker Style.css">
+        <title>Taste Tracker Reviews Page</title>
+    </head>
+    <body>
+        <hr>
+        <div class="outerBorder">
+            <div class="innerBorder">
+                <h1>Taste Tracker Reviews Page</h1>
+            </div>
+        </div>
+        <hr>
+        <div class="outerBorder">
+            <div class="innerBorder">
+                <h2>Reviews</h2>
+                {% for review in reviews %}
+                    <h2 class="review">{{ review[0] }} - {{ review[1] }} - {{ review[2] }} - {{ review[3] }} - {{ review[4] }}</h2>
+                {% endfor %}
+            </div>
+        </div>
+    </body>
+</html>
