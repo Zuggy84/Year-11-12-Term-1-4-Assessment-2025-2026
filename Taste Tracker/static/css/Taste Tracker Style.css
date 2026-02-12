@@ -18,8 +18,22 @@ a {
     border-radius: 10px;
     padding: 10px;
 }
+hr {
+    color: white;
+    margin: 10px;
+    border: 2px solid orange;
+    padding: 2px;
+}
 #outlined {
     -webkit-text-stroke: 1px white;
+}
+#invalidLogIn {
+    color: white;
+    background-color: red;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 25px;
 }
 .outerBorder {
     margin: 20px;

@@ -8,17 +8,50 @@
         <hr>
         <div class="outerBorder">
             <div class="innerBorder">
-                <h1>Taste Tracker Reviews Page</h1>
+                <h1>Review On Taste Tracker!</h1>
+                <hr>
+                <a href="/">Back To Home Page</a>
             </div>
         </div>
+        {% if user_logged_in %}
+            <hr>
+            <div class="outerBorder">
+                <div class="innerBorder">
+                    <h2>Add a Review:</h2>
+                    <br>
+                    <form action="/reviews" method="POST">
+                        <label for="restaurant_name">Restaurant Name:</label>
+                        <br>
+                        <input type="text" name="restaurant_name" required>
+                        <br>
+                        <label for="cuisine_type">Restaurant Cuisine Type:</label>
+                        <br>
+                        <input type="text" name="cuisine_type" required>
+                        <br>
+                        <label for="restaurant_rating">Restaurant Rating:</label>
+                        <br>
+                        <input type="number" name="restaurant_rating" min="0" max="10" value" / 10" required>
+                        <br>
+                        <label for="restaurant_review_text">Restaurant Review Text:</label>
+                        <br>
+                        <input type="text" name="restaurant_review_text" required>
+                        <br>
+                        <input type="submit" value="Submit Review">
+                    </form>
+                </div>
+            </div>
+        {% endif %}
+            <hr>
+            <div class="outerBorder">
+                <div class="innerBorder">
+                    <h2>Reviews:</h2>
+                    <br>
+                    {% for review in reviews %}
+                        <h2 class="review">{{ review[0] }} | {{ review[1] }} | {{ review[2] }} | {{ review[3] }} | {{ review[4] }}</h2>
+                        <hr>
+                    {% endfor %}
+                </div>
+            </div>
         <hr>
-        <div class="outerBorder">
-            <div class="innerBorder">
-                <h2>Reviews</h2>
-                {% for review in reviews %}
-                    <h2 class="review">{{ review[0] }} - {{ review[1] }} - {{ review[2] }} - {{ review[3] }} - {{ review[4] }}</h2>
-                {% endfor %}
-            </div>
-        </div>
     </body>
 </html>

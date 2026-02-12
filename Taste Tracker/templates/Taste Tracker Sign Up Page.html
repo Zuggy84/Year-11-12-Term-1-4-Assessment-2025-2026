@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/static/css/Taste Tracker Style.css">
+        <title>Taste Tracker Sign Up Page</title>
+    </head>
+    <body>
+        <hr>
+        <div class="outerBorder">
+            <div class="innerBorder">
+                <h1>New Here? Sign Up!</h1>
+            </div>
+        </div>
+        <hr>
+        <div class="outerBorder">
+            <div class="innerBorder">
+                <h2>Sign Up:</h2>
+                <br>
+                <form action="/signUp" method="POST">
+                    <label for="user_name">Username:</label>
+                    <br>
+                    <input type="text" name="user_name" required>
+                    <br>
+                    <label for="user_email">Email:</label>
+                    <br>
+                    <input type="email" name="user_email" required>
+                    <br>
+                    <label for="user_password">Password:</label>
+                    <br>
+                    <input type="password" name="user_password" required>
+                    <br>
+                    <input type="submit" value="Sign Up">
+                </form>
+                <hr>
+                <h1>OR</h1>
+                <hr>
+                <h2>Log In:</h2>
+                <br>
+                <a href="/logIn">Log In Page</a>
+                <hr>
+                <h1>OR</h1>
+                <hr>
+                <h2>Go Back To Home Page:</h2>
+                <br>
+                <a href="/">Back To Home Page</a>
+            </div>
+        </div>
+        <hr>
+    </body>
+</html>
